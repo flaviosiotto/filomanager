@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Filo Manager
+Comment=Il Filo di Marianna Task Manager
+Exec=filomanager
+Terminal=false
+Type=Application
+StartupNotify=false
+Icon=filomanager
+Categories=Office;Utility;GNOME;GTK;
+X-Ubuntu-Gettext-Domain=filomanager

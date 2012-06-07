@@ -1,0 +1,4 @@
+include FiloManager.conf
+recursive-include filomanager/ui/glade *.glade
+recursive-include filomanager/ui/images *.png
+recursive-include filomanager/jobs/templates *.ott

@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
+
+
+if __name__ == "__main__":
+	
+	from filomanager.ui import FILO_Manager
+
+	confFile=os.path.join(os.path.dirname(os.path.abspath(__file__)), "FiloManager.conf" )
+
+	FILO = FILO_Manager.FILO_Manager(confFile)
+	FILO.main()

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="menù-chef.svg"
+   inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/EN_chef.png"
+   inkscape:export-xdpi="18.86154"
+   inkscape:export-ydpi="18.86154">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.47417135"
+     inkscape:cx="372.04724"
+     inkscape:cy="913.90541"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="690"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:bbox-paths="false"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-page="false"
+     inkscape:snap-grids="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4642">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4661" />
+      <stop
+         id="stop4663"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0.24705882;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3925">
+      <stop
+         id="stop3927"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         id="stop3929"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3821">
+      <stop
+         id="stop3823"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         id="stop3825"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="gradient"
+       id="linearGradient3793">
+      <stop
+         id="stop3795"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         id="stop3797"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       osb:paint="solid"
+       id="linearGradient3787">
+      <stop
+         id="stop3789"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:0" />
+    </linearGradient>
+    <inkscape:perspective
+       id="perspective2987"
+       inkscape:persp3d-origin="1265.0527 : 369.67828 : 1"
+       inkscape:vp_z="2339.4056 : 553.09655 : 1"
+       inkscape:vp_y="-66.051085 : 1001.7188 : 0"
+       inkscape:vp_x="213.24399 : 574.79318 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       y2="308.38483"
+       x2="252.53813"
+       y1="126.36218"
+       x1="134"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3855"
+       xlink:href="#linearGradient3821"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(1.0188073,0,0,1.0145388,-132.03779,53.626589)"
+       y2="308.38483"
+       x2="252.53813"
+       y1="126.36218"
+       x1="134"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4639"
+       xlink:href="#linearGradient3821"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="448.7673"
+       x2="474.13705"
+       y1="400.55182"
+       x1="306.27332"
+       id="linearGradient3935"
+       xlink:href="#linearGradient3925"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="448.7673"
+       x2="474.13705"
+       y1="400.55182"
+       x1="306.27332"
+       id="linearGradient3935-6"
+       xlink:href="#linearGradient3925-4"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3925-4">
+      <stop
+         id="stop3927-7"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         id="stop3929-1"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3925-4"
+       id="linearGradient3860"
+       gradientUnits="userSpaceOnUse"
+       x1="306.27332"
+       y1="400.55182"
+       x2="474.13705"
+       y2="448.7673" />
+    <linearGradient
+       y2="448.7673"
+       x2="474.13705"
+       y1="400.55182"
+       x1="306.27332"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3881"
+       xlink:href="#linearGradient3925-4"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="448.7673"
+       x2="474.13705"
+       y1="400.55182"
+       x1="306.27332"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3885"
+       xlink:href="#linearGradient3925-4"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="448.7673"
+       x2="474.13705"
+       y1="400.55182"
+       x1="306.27332"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3889"
+       xlink:href="#linearGradient3925-4"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="448.7673"
+       x2="474.13705"
+       y1="400.55182"
+       x1="306.27332"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3893"
+       xlink:href="#linearGradient3925-4"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="448.7673"
+       x2="474.13705"
+       y1="400.55182"
+       x1="306.27332"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3897"
+       xlink:href="#linearGradient3925-4"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="516.76727"
+       x2="478.27911"
+       y1="516.76727"
+       x1="302.13126"
+       id="linearGradient4650"
+       xlink:href="#linearGradient4642"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="308.38483"
+       x2="252.53813"
+       y1="126.36218"
+       x1="134"
+       gradientTransform="matrix(1.0188073,0,0,1.0145388,-132.03779,53.626589)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4659-9"
+       xlink:href="#linearGradient3821-4"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3821-4">
+      <stop
+         id="stop3823-7"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         id="stop3825-9"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3821-4"
+       id="linearGradient4685"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0188073,0,0,1.0145388,-132.03779,53.626589)"
+       x1="134"
+       y1="126.36218"
+       x2="252.53813"
+       y2="308.38483" />
+    <linearGradient
+       y2="308.38483"
+       x2="252.53813"
+       y1="126.36218"
+       x1="134"
+       gradientTransform="matrix(1.0188073,0,0,1.0145388,-132.03779,53.626589)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4729"
+       xlink:href="#linearGradient3821-4"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="308.38483"
+       x2="252.53813"
+       y1="126.36218"
+       x1="134"
+       gradientTransform="matrix(1.0188073,0,0,1.0145388,-132.03779,53.626589)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4743"
+       xlink:href="#linearGradient3821-4"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="308.38483"
+       x2="252.53813"
+       y1="126.36218"
+       x1="134"
+       gradientTransform="matrix(1.0188073,0,0,1.0145388,-32.928473,64.612601)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4746"
+       xlink:href="#linearGradient3821-4"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="266.14148"
+       x2="266.73758"
+       y1="232.01089"
+       x1="172.11388"
+       gradientTransform="matrix(1.9203072,0,0,0.98886672,-215.15318,-2.2300321)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3858-3"
+       xlink:href="#linearGradient3821-2"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3821-2">
+      <stop
+         id="stop3823-77"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         id="stop3825-2"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <filter
+       id="filter5523"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur5525"
+         stdDeviation="9.7113352"
+         inkscape:collect="always" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3821"
+       id="linearGradient5893"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.9207699,0,0,0.98886517,-129.32775,-68.229466)"
+       x1="172.11388"
+       y1="232.01089"
+       x2="266.73758"
+       y2="266.14148" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       transform="matrix(0.97113208,-0.23854241,0.28055354,0.95983838,0,0)"
+       ry="9.2410078"
+       y="176.95541"
+       x="189.94684"
+       height="408.46063"
+       width="235.07175"
+       id="rect3017-6"
+       style="fill:none;stroke:#828282;stroke-width:12.03594589;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       transform="matrix(0.97113208,-0.23854241,0.28055354,0.95983838,0,0)"
+       style="fill:#828282;fill-opacity:1;stroke:none"
+       id="rect3813-5"
+       width="203.8364"
+       height="377.94034"
+       x="204.92487"
+       y="192.58104"
+       ry="6.9582453" />
+    <path
+       transform="matrix(1.0002409,0,0,0.99999848,89.913437,-61.999665)"
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       inkscape:connector-curvature="0"
+       id="rect3819-9"
+       d="m 297.32184,162.85017 c -0.92264,-0.008 -1.8473,0.0964 -2.75716,0.35658 l -217.38887,62.1755 c -4.85262,1.38778 -7.26193,6.22815 -5.38303,10.85965 l 129.58648,319.50039 162.60675,0 80.48279,-23.01596 c 4.85262,-1.38777 7.26193,-6.22814 5.38303,-10.85964 L 306.70931,169.0742 c -1.5266,-3.7631 -5.38939,-6.18964 -9.38747,-6.22403 z"
+       style="opacity:0.46923074;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter5523)" />
+    <rect
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       transform="matrix(0.96055723,-0.27808238,0.37199155,0.92823612,0,0)"
+       ry="8.6822557"
+       y="197.24686"
+       x="73.108452"
+       height="383.76331"
+       width="232.90353"
+       id="rect3017"
+       style="fill:#ffffff;fill-opacity:1;stroke:#820000;stroke-width:11.6124754;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       transform="matrix(0.96055723,-0.27808238,0.37199155,0.92823612,0,0)"
+       style="fill:#820000;fill-opacity:1;stroke:none"
+       id="rect3813"
+       width="201.95631"
+       height="355.08838"
+       x="87.948402"
+       y="211.92761"
+       ry="6.5375185" />
+    <text
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       transform="matrix(1.0267637,-0.29724925,0.34973006,0.87268667,0,0)"
+       sodipodi:linespacing="125%"
+       id="text3815"
+       y="288.12994"
+       x="116.66035"
+       style="font-size:54.05775833px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:URW Chancery L;-inkscape-font-specification:URW Chancery L Bold Italic"
+       xml:space="preserve"><tspan
+         y="288.12994"
+         x="116.66035"
+         id="tspan3817"
+         sodipodi:role="line">Menù</tspan></text>
+    <path
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       inkscape:connector-curvature="0"
+       id="rect3819"
+       d="m 364.44154,94.06283 c -0.92286,-0.008 -1.84775,0.0964 -2.75783,0.35658 l -217.44125,62.1754 c -4.85379,1.38778 -7.26368,6.22814 -5.38432,10.85963 l 129.6177,319.4999 162.64593,0 80.50218,-23.01593 c 4.85379,-1.38776 7.26368,-6.22813 5.38433,-10.85962 L 373.83127,100.28686 c -1.52697,-3.76311 -5.39069,-6.18964 -9.38973,-6.22403 z"
+       style="opacity:0.46923074;fill:url(#linearGradient5893);fill-opacity:1;stroke:none" />
+    <rect
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       ry="6.1671033"
+       y="296.63467"
+       x="349.05215"
+       height="221.39359"
+       width="243.26295"
+       id="rect3857"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:7.73056173;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       sodipodi:nodetypes="sssccccssscscs"
+       inkscape:connector-curvature="0"
+       id="rect4645"
+       d="m 424.49012,320.79135 c -21.52875,0 -38.98579,17.12486 -38.98579,38.246 0,43.71944 17.45704,27.33313 38.98579,27.33313 0.0861,0 0.17035,5.6e-4 0.25628,0 l 0,36.23393 91.87448,0 0,-36.23393 c 0.0858,5.6e-4 0.17021,0 0.25629,0 21.52871,0 38.98578,16.11075 38.98578,-27.33313 0,-21.12114 -17.45707,-38.246 -38.98578,-38.246 -9.39395,0 -18.01608,3.2494 -24.74657,8.67911 -6.72892,-5.42471 -15.34136,-8.67911 -24.73049,-8.67911 -7.93144,0 -15.30693,2.33434 -21.463,6.32603 -6.15558,-3.99071 -13.5166,-6.32603 -21.44699,-6.32603 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:5.39628506;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       inkscape:connector-curvature="0"
+       id="path3847"
+       d="m 425.75924,443.08181 c -0.51042,0 -1.14151,0.009 -1.87478,0.034 -10.99935,0.31763 -45.15211,2.86412 -45.15211,2.86412 l 0,3.40645 35.16284,0.76263 c -11.82581,1.31565 -35.16284,2.64381 -35.16284,2.64381 l 0,3.42339 35.16284,1.35578 -35.16284,2.05066 0,3.40642 c 0,0 21.06103,0.60447 32.91597,1.76255 0.79032,0.0773 1.54742,0.14721 2.24687,0.2203 l -35.16284,1.44053 0,3.40646 c 0,0 34.76514,1.67219 45.2666,1.88115 0.70012,0.014 1.29346,0.0171 1.76029,0.0171 18.05459,0 22.42,-5.25844 23.0841,-12.13438 20.22214,2.79315 85.2167,10.83949 108.95183,2.45739 6.453,-2.27889 6.453,-7.77095 0,-10.04984 -23.76962,-8.39428 -88.91718,-0.30748 -109.03769,2.47432 -0.89969,-6.5253 -5.5673,-11.42257 -22.99824,-11.42257 z"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.36262992;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       sodipodi:nodetypes="cccccscssccc"
+       inkscape:connector-curvature="0"
+       id="path3847-1"
+       d="m 515.60804,469.80701 c 0.51043,0 1.14151,0.009 1.87478,0.034 10.99937,0.31759 45.15213,2.86414 45.15213,2.86414 l 0,23.87896 c 0,0 -34.76515,1.6722 -45.26663,1.88115 -0.70006,0.014 -1.29342,0.0171 -1.76028,0.0171 -18.0546,0 -22.41998,-5.25843 -23.08411,-12.13438 -20.2221,2.79315 -85.21669,10.83948 -108.95181,2.45737 -6.45303,-2.27888 -6.45303,-7.77092 0,-10.04984 23.76962,-8.39425 88.91718,-0.30746 109.03771,2.47434 0.89967,-6.52532 5.56728,-11.42259 22.99821,-11.42259 z"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.36262992;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       id="rect4645-8"
+       d="m 516.16696,331.83435 c -9.21548,0.21883 -18.01529,5.21677 -24.05842,12.49265 l 14.05588,67.12628 0,-34.5549 c 11.89482,-5.64645 24.41488,2.7828 36.578,0.38278 4.22208,-9.41831 3.51484,-21.33746 -0.49032,-30.62267 -5.33467,-9.40723 -15.69544,-15.20094 -26.08514,-14.82414 z"
+       style="fill:none;stroke:#000000;stroke-width:3.23777127;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:6.47554276, 3.23777137;stroke-dashoffset:0"
+       inkscape:connector-curvature="0" />
+    <rect
+       inkscape:export-ydpi="18.86154"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       ry="3.2178326"
+       y="87.836784"
+       x="451.73203"
+       height="115.51737"
+       width="143.75395"
+       id="rect3857-7"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.29263592;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <image
+       y="91.595474"
+       x="456.10901"
+       id="image3844"
+       xlink:href="file:///home/flavio/Dropbox/Progetti/FILO_Manager/images/spanishflag.gif"
+       height="108"
+       width="135"
+       inkscape:export-filename="/home/flavio/Dropbox/Progetti/FILO_Manager/images/ES_chef.png"
+       inkscape:export-xdpi="18.86154"
+       inkscape:export-ydpi="18.86154" />
+  </g>
+</svg>
