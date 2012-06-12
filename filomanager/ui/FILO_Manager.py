@@ -41,9 +41,6 @@ class FILO_Manager:
 
 
 		self.builder = gtk.Builder()
-#		filoGlade=os.path.join( self.config.get("miscellaneous", "glade-dir") , "FILO_Manager.glade")
-#		print pkgutil.get_data(__name__, 'glade/FILO_Manager.glade')
-#		filoGlade=os.path.join( pkgutil.get_data(__name__, 'FILO_Manager.glade'))
 		filoGlade=resource_filename(__name__, 'glade/FILO_Manager.glade')
 		self.builder.add_from_file( filoGlade )
 #		self.builder.add_from_string(pkgutil.get_data(__name__, 'glade/FILO_Manager.glade'))
@@ -74,8 +71,7 @@ class FILO_Manager:
 
 		self.window = self.builder.get_object("FiloManager")
 		self.window.set_title("Il Filo - Manager "+__version__)
-		self.window.set_icon_from_file( resource_filename(__name__, 'images/FILO_icon.png') )		
-#		self.window.set_icon_from_file( os.path.join( miscOpt["images-dir"], "FILO_icon.png") )
+		self.window.set_icon_from_file( resource_filename(__name__, 'images/FILO_icon.png') )
 
 		self.window.connect("delete_event", self.delete_event)
 
@@ -83,7 +79,6 @@ class FILO_Manager:
 
 
 		logoImg = self.builder.get_object("logo")
-#		logoImg.set_from_file( os.path.join( miscOpt["images-dir"], "logo.png") )
 		logoImg.set_from_file( resource_filename(__name__, 'images/logo.png') )	
 
 		companyName = self.builder.get_object("companyName")
@@ -99,7 +94,6 @@ class FILO_Manager:
 		IT_Button_menu = self.builder.get_object("chefMenu_IT")
 		IT_Image_menu = gtk.Image()
 		IT_Image_menu.set_from_file( resource_filename(__name__, 'images/IT_chef.png') )
-		#set_from_file( os.path.join( miscOpt["images-dir"], "IT_chef.png") )
 		
 		IT_Button_menu.add(IT_Image_menu)
 		IT_Button_menu.connect( "clicked", self.menuChef, { "conv": None, "options": options } )
@@ -107,35 +101,30 @@ class FILO_Manager:
 		EN_Button_menu = self.builder.get_object("chefMenu_EN")
 		EN_Image_menu = gtk.Image()
 		EN_Image_menu.set_from_file( resource_filename(__name__, 'images/EN_chef.png') )
-		#EN_Image_menu.set_from_file( os.path.join( miscOpt["images-dir"], "EN_chef.png") )
 		EN_Button_menu.add(EN_Image_menu)
 		EN_Button_menu.connect( "clicked", self.menuChef, { "conv": "en", "options": options } )
 
 		FR_Button_menu = self.builder.get_object("chefMenu_FR")
 		FR_Image_menu = gtk.Image()
 		FR_Image_menu.set_from_file( resource_filename(__name__, 'images/FR_chef.png') )
-		#FR_Image_menu.set_from_file( os.path.join( miscOpt["images-dir"], "FR_chef.png") )
 		FR_Button_menu.add(FR_Image_menu)
 		FR_Button_menu.connect( "clicked", self.menuChef, { "conv": "fr", "options": options } )
 
 		ES_Button_menu = self.builder.get_object("chefMenu_ES")
 		ES_Image_menu = gtk.Image()
 		ES_Image_menu.set_from_file( resource_filename(__name__, 'images/ES_chef.png') )
-		#ES_Image_menu.set_from_file( os.path.join( miscOpt["images-dir"], "ES_chef.png") )
 		ES_Button_menu.add(ES_Image_menu)
 		ES_Button_menu.connect( "clicked", self.menuChef, { "conv": "es", "options": options } )
 
 		NL_Button_menu = self.builder.get_object("chefMenu_NL")
 		NL_Image_menu = gtk.Image()
 		NL_Image_menu.set_from_file( resource_filename(__name__, 'images/NL_chef.png') )
-		#NL_Image_menu.set_from_file( os.path.join( miscOpt["images-dir"], "NL_chef.png") )
 		NL_Button_menu.add(NL_Image_menu)
 		NL_Button_menu.connect("clicked", self.menuChef, { "conv": "nl", "options": options } )
 
 		Button_mails = self.builder.get_object("Mails")
 		Image_mails = gtk.Image()
 		Image_mails.set_from_file( resource_filename(__name__, 'images/chefMails.png') )
-		#Image_mails.set_from_file( os.path.join( miscOpt["images-dir"], "chefMails.png") )
 		Button_mails.add(Image_mails)
 		Button_mails.connect("clicked", self.sendMail, { "test": True, "options": options } )
 

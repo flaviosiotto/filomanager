@@ -32,9 +32,7 @@ class jobManager:
 		self.q = Queue()
 
 		self.builder = gtk.Builder()
-		#runJobGlade=os.path.join( config.get("miscellaneous","glade-dir") , "runjob.glade")
 		runJobGlade=resource_filename('filomanager.ui', 'glade/runjob.glade')
-		#runJobGlade=os.path.join( config.get("miscellaneous","glade-dir") , "runjob.glade")
 		self.builder.add_from_file(runJobGlade)
 
 		parameters = self.builder.get_object("parametersList")
