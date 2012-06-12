@@ -56,7 +56,7 @@ class jobManager:
 		logger=logging.getLogger(jobName)
 		if len(logger.handlers) == 0:
 			formatter = logging.Formatter( '%(asctime)-6s: %(levelname)s - %(message)s' )
-			fileLogger = logging.FileHandler( filename = os.path.join( config.get('Menu-chef','log-dir'), self.jobName+".log") )
+			fileLogger = logging.FileHandler( filename = os.path.join( os.environ['HOME'], '.filomanager/log/'+self.jobName+".log") )
 			fileLogger.setFormatter( formatter )
 			fileLogger.setLevel( logging.INFO )
 			logger.setLevel( logging.INFO )

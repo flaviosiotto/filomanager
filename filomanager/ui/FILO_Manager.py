@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import os
+
 import datetime
 import ConfigParser
 
@@ -62,9 +64,6 @@ class FILO_Manager:
 		ChefOpt["file-output-dir"] = self.config.get("Menu-chef", "file-output-dir")
 		ChefOpt["file-output-format"] = self.config.get("Menu-chef", "file-output-format")
 		ChefOpt["file-output-name"] = self.config.get("Menu-chef", "file-output-name")
-
-		miscOpt = dict()
-		miscOpt["images-dir"] = self.config.get("miscellaneous", "images-dir")
 
 		options = {"data": today, "QuickOrder-DB": dbConn, "chef-Opt": ChefOpt}
 
@@ -177,5 +176,17 @@ class FILO_Manager:
 		gtk.main_quit()
 
 	def main(self):
+		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager') ):
+			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager') )
+
+		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/log') ):
+			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/log') )
+
+		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/templates') ):
+			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/templates') )
+
+		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/Menuchef') ):
+			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/Menuchef') )
+
 		gtk.main()
 
