@@ -20,8 +20,8 @@ class menuChef(job):
 
 	def runJob(self):
 		if not self.requestStop:
-			
-			document = odf_new_document( resource_filename(__name__, "templates/menu-chef.ott" ) )
+			print resource_filename('filomanager.stages', "templates/menu-chef.ott" )
+			document = odf_new_document( resource_filename('filomanager.stages', "templates/menu-chef.ott" ) )
 			body = document.get_body()
 			t_starters = body.get_table(name=self.env["Menu-chef"]["starters-list-name"])
 			r_starters = t_starters.get_row(0).clone()
@@ -80,6 +80,6 @@ class menuChef(job):
 								self.env["Menu-chef"]["file-output-format"]
 			document.save( outputFileName )
 			self.logInfo(logging.INFO, "open document "+outputFileName, 75)
-			os.system("oowriter "+outputFileName)
+			os.system("lowriter "+outputFileName)
 
 
