@@ -182,9 +182,6 @@ class FILO_Manager:
 		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/log') ):
 			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/log') )
 
-		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/templates') ):
-			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/templates') )
-
 		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/Menuchef') ):
 			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/Menuchef') )
 
