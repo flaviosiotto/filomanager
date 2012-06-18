@@ -11,7 +11,6 @@ import logging
 
 import sys
 
-#from filomanager.jobs.jobs import job
 from multiprocessing import Process, Queue
 
 class job(Process):
@@ -70,6 +69,3 @@ class job(Process):
 			raise
 		finally:
 			pass
-
-#import filomanager.jobs.menuChef as menuChef
-#import filomanager.jobs.mailChimp as mailChimp
