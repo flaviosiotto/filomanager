@@ -17,8 +17,6 @@ from pkg_resources import resource_filename
 from filomanager.jobs import job
 from filomanager.jobs.menuChef import menuChef
 
-#from multiprocessing import Process, Queue
-
 
 class jobManager:
 	def __init__(self, jobName, configFile):
@@ -160,8 +158,3 @@ class jobManager:
 				return True
 		except:
 			pass
-
-
-
-print globals().keys()
-#import filomanager.jobs.mailChimp as mailChimp
