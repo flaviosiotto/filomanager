@@ -16,6 +16,7 @@ from pkg_resources import resource_filename
 
 from filomanager.jobs import job
 from filomanager.jobs.menuChef import menuChef
+from filomanager.jobs.mailChimp import sendMail
 
 
 class jobManager:

@@ -121,11 +121,18 @@ class FILO_Manager:
 		NL_Button_menu.add(NL_Image_menu)
 		NL_Button_menu.connect("clicked", self.menuChef, { "conv": "nl", "options": options } )
 
+		Button_testmails = self.builder.get_object("MailsTest")
+		Image_testmails = gtk.Image()
+		Image_testmails.set_from_file( resource_filename(__name__, 'images/testMails.png') )
+		Button_testmails.add(Image_testmails)
+		Button_testmails.connect("clicked", self.sendMail, { "test": True, "options": options } )
+
 		Button_mails = self.builder.get_object("Mails")
 		Image_mails = gtk.Image()
 		Image_mails.set_from_file( resource_filename(__name__, 'images/chefMails.png') )
 		Button_mails.add(Image_mails)
 		Button_mails.connect("clicked", self.sendMail, { "test": True, "options": options } )
+
 
 		self.window.show_all()
 
