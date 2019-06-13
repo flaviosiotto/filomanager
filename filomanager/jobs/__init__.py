@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-print "__init__.py"
+print("__init__.py")
 
 import datetime
 
-import ConfigParser
+import configparser
 
 import logging
 
@@ -22,7 +22,7 @@ class job(Process):
 		self.__dict__.update(kw)
 		self.__dict__.update(locals())
 
-		config = ConfigParser.ConfigParser()
+		config = configparser.ConfigParser()
 		config.read(configFile)
 
 		self.env = dict()
@@ -39,7 +39,7 @@ class job(Process):
 		self.__dict__[paramName]=paramValue
 
 	def logInfo(self, level, text, pbar=None):
-		print str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))+": "+ text
+		print(str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))+": "+ text)
 
 		if level == logging.INFO:
 			self.logger.info(text)

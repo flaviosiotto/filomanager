@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from lpod.document import odf_new_document
+# TODO
+# sostituzione lpod
+#from lpod.document import odf_new_document
 
 from filomanager.jobs import job
 
@@ -20,15 +22,15 @@ class menuChef(job):
 
 	def runJob(self):
 		if not self.requestStop:
-			print resource_filename('filomanager.stages', "templates/menu-chef.ott" )
-			document = odf_new_document( resource_filename('filomanager.stages', "templates/menu-chef.ott" ) )
-			body = document.get_body()
-			t_starters = body.get_table(name=self.env["Menu-chef"]["starters-list-name"])
-			r_starters = t_starters.get_row(0).clone()
-			t_firsts = body.get_table(name=self.env["Menu-chef"]["first-courses-list-name"])
-			r_firsts = t_firsts.get_row(0).clone()
-			t_seconds = body.get_table(name=self.env["Menu-chef"]["second-courses-list-name"])
-			r_seconds = t_seconds.get_row(0).clone()
+			print(resource_filename('filomanager.stages', "templates/menu-chef.ott" ))
+			# document = odf_new_document( resource_filename('filomanager.stages', "templates/menu-chef.ott" ) )
+			# body = document.get_body()
+			# t_starters = body.get_table(name=self.env["Menu-chef"]["starters-list-name"])
+			# r_starters = t_starters.get_row(0).clone()
+			# t_firsts = body.get_table(name=self.env["Menu-chef"]["first-courses-list-name"])
+			# r_firsts = t_firsts.get_row(0).clone()
+			# t_seconds = body.get_table(name=self.env["Menu-chef"]["second-courses-list-name"])
+			# r_seconds = t_seconds.get_row(0).clone()
 
 		if not self.requestStop:
 			self.logInfo(logging.INFO, "extract data from quickOrder", 20)
@@ -61,12 +63,12 @@ class menuChef(job):
 					text = row['description']
 				else:
 					text = gtranslate.translate(row['description'], src='it', to=self.translate)
-				descCell.set_value( text.decode('utf-8') )
-				priceCell = r.get_cell( 1 )
-				priceCell.set_value( row['price'] )
-				r.set_cell(0, descCell)
-				r.set_cell(1, priceCell)
-				t.insert_row(i, r)
+				# descCell.set_value( text.decode('utf-8') )
+				# priceCell = r.get_cell( 1 )
+				# priceCell.set_value( row['price'] )
+				# r.set_cell(0, descCell)
+				# r.set_cell(1, priceCell)
+				# t.insert_row(i, r)
 #				print row['category'] + " " + row['description'] + " " + str(row['price'])
 
 		if not self.requestStop:
@@ -78,7 +80,7 @@ class menuChef(job):
 								self.today.strftime("%d-%m-%Y")+"-"+\
 								lang + "_" + self.env["Menu-chef"]["file-output-name"]+"."+\
 								self.env["Menu-chef"]["file-output-format"]
-			document.save( outputFileName )
+#			document.save( outputFileName )
 			self.logInfo(logging.INFO, "open document "+outputFileName, 75)
 			os.system("lowriter "+outputFileName)
 

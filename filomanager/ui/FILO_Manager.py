@@ -1,15 +1,14 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import os
 
 import datetime
-import ConfigParser
+import configparser
 
-import gobject
-import pygtk
-pygtk.require('2.0')
-import gtk
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, GLib
 
 from filomanager.jobs import jobs
 
@@ -25,172 +24,171 @@ __status__ = "Development"
 
 
 def getSplits(text,splitLength=4500):
-	'''
-	Translate Api has a limit on length of text(4500 characters) that can be translated at once, 
-	'''
-	return (text[index:index+splitLength] for index in xrange(0,len(text),splitLength))
+    '''
+    Translate Api has a limit on length of text(4500 characters) that can be translated at once, 
+    '''
+    return (text[index:index+splitLength] for index in xrange(0,len(text),splitLength))
 
 
 class FILO_Manager:
 
-	def __init__(self, configFile=None ):
+    def __init__(self, configFile='/etc/FiloManager.conf' ):
 
-		configFile = '/etc/FiloManager.conf'
-		self.configFile = configFile
+        self.configFile = configFile
 
-		self.config = ConfigParser.ConfigParser()
-		self.config.read( configFile )
-
-
-		self.builder = gtk.Builder()
-		filoGlade=resource_filename(__name__, 'glade/FILO_Manager.glade')
-		self.builder.add_from_file( filoGlade )
-#		self.builder.add_from_string(pkgutil.get_data(__name__, 'glade/FILO_Manager.glade'))
+        self.config = configparser.ConfigParser()
+        self.config.read( configFile )
 
 
-		today = datetime.date.today()
-
-		dbConn = dict()
-		dbConn["host"] = self.config.get("QuickOrder DB", "host")
-		dbConn["dbname"] = self.config.get("QuickOrder DB", "dbname")
-		dbConn["user"] = self.config.get("QuickOrder DB", "user")
-		dbConn["password"] = self.config.get("QuickOrder DB", "password")
-
-		ChefOpt = dict()
-		ChefOpt["templates-dir"] = self.config.get("Menu-chef", "templates-dir")
-		ChefOpt["starters-list-name"] = self.config.get("Menu-chef", "starters-list-name")
-		ChefOpt["first-courses-list-name"] = self.config.get("Menu-chef", "first-courses-list-name")
-		ChefOpt["second-courses-list-name"] = self.config.get("Menu-chef", "second-courses-list-name")
-		ChefOpt["file-output-dir"] = self.config.get("Menu-chef", "file-output-dir")
-		ChefOpt["file-output-format"] = self.config.get("Menu-chef", "file-output-format")
-		ChefOpt["file-output-name"] = self.config.get("Menu-chef", "file-output-name")
-
-		options = {"data": today, "QuickOrder-DB": dbConn, "chef-Opt": ChefOpt}
+        self.builder = Gtk.Builder()
+        filoGlade=resource_filename(__name__, 'glade/FILO_Manager.glade')
+        self.builder.add_from_file( filoGlade )
+#       self.builder.add_from_string(pkgutil.get_data(__name__, 'glade/FILO_Manager.glade'))
 
 
-		self.window = self.builder.get_object("FiloManager")
-		self.window.set_title("Il Filo - Manager "+__version__)
-		self.window.set_icon_from_file( resource_filename(__name__, 'images/FILO_icon.png') )
+        today = datetime.date.today()
 
-		self.window.connect("delete_event", self.delete_event)
+        dbConn = dict()
+        dbConn["host"] = self.config.get("QuickOrder DB", "host")
+        dbConn["dbname"] = self.config.get("QuickOrder DB", "dbname")
+        dbConn["user"] = self.config.get("QuickOrder DB", "user")
+        dbConn["password"] = self.config.get("QuickOrder DB", "password")
 
-		self.window.connect("destroy", self.destroy)
+        ChefOpt = dict()
+        ChefOpt["templates-dir"] = self.config.get("Menu-chef", "templates-dir")
+        ChefOpt["starters-list-name"] = self.config.get("Menu-chef", "starters-list-name")
+        ChefOpt["first-courses-list-name"] = self.config.get("Menu-chef", "first-courses-list-name")
+        ChefOpt["second-courses-list-name"] = self.config.get("Menu-chef", "second-courses-list-name")
+        ChefOpt["file-output-dir"] = self.config.get("Menu-chef", "file-output-dir")
+        ChefOpt["file-output-format"] = self.config.get("Menu-chef", "file-output-format")
+        ChefOpt["file-output-name"] = self.config.get("Menu-chef", "file-output-name")
 
-
-		logoImg = self.builder.get_object("logo")
-		logoImg.set_from_file( resource_filename(__name__, 'images/logo.png') )	
-
-		companyName = self.builder.get_object("companyName")
-		companyName.set_text( self.config.get("company", "name") )
-
-		companyBuffer = self.builder.get_object("companyBuffer")
-		companyBuffer.insert_at_cursor( self.config.get("company", "address") + "\n" )
-		companyBuffer.insert_at_cursor( self.config.get("company", "city") + " " )
-		companyBuffer.insert_at_cursor( self.config.get("company", "country") + "\n" )
-		companyBuffer.insert_at_cursor( self.config.get("company", "email") )
-
-		# Creates Buttons 
-		IT_Button_menu = self.builder.get_object("chefMenu_IT")
-		IT_Image_menu = gtk.Image()
-		IT_Image_menu.set_from_file( resource_filename(__name__, 'images/IT_chef.png') )
-		
-		IT_Button_menu.add(IT_Image_menu)
-		IT_Button_menu.connect( "clicked", self.menuChef, { "conv": None, "options": options } )
-
-		EN_Button_menu = self.builder.get_object("chefMenu_EN")
-		EN_Image_menu = gtk.Image()
-		EN_Image_menu.set_from_file( resource_filename(__name__, 'images/EN_chef.png') )
-		EN_Button_menu.add(EN_Image_menu)
-		EN_Button_menu.connect( "clicked", self.menuChef, { "conv": "en", "options": options } )
-
-		FR_Button_menu = self.builder.get_object("chefMenu_FR")
-		FR_Image_menu = gtk.Image()
-		FR_Image_menu.set_from_file( resource_filename(__name__, 'images/FR_chef.png') )
-		FR_Button_menu.add(FR_Image_menu)
-		FR_Button_menu.connect( "clicked", self.menuChef, { "conv": "fr", "options": options } )
-
-		ES_Button_menu = self.builder.get_object("chefMenu_ES")
-		ES_Image_menu = gtk.Image()
-		ES_Image_menu.set_from_file( resource_filename(__name__, 'images/ES_chef.png') )
-		ES_Button_menu.add(ES_Image_menu)
-		ES_Button_menu.connect( "clicked", self.menuChef, { "conv": "es", "options": options } )
-
-		NL_Button_menu = self.builder.get_object("chefMenu_NL")
-		NL_Image_menu = gtk.Image()
-		NL_Image_menu.set_from_file( resource_filename(__name__, 'images/NL_chef.png') )
-		NL_Button_menu.add(NL_Image_menu)
-		NL_Button_menu.connect("clicked", self.menuChef, { "conv": "nl", "options": options } )
-
-		Button_testmails = self.builder.get_object("MailsTest")
-		Image_testmails = gtk.Image()
-		Image_testmails.set_from_file( resource_filename(__name__, 'images/testMails.png') )
-		Button_testmails.add(Image_testmails)
-		Button_testmails.connect("clicked", self.sendMail, { "test": True, "options": options } )
-
-		Button_mails = self.builder.get_object("Mails")
-		Image_mails = gtk.Image()
-		Image_mails.set_from_file( resource_filename(__name__, 'images/chefMails.png') )
-		Button_mails.add(Image_mails)
-		Button_mails.connect("clicked", self.sendMail, { "test": True, "options": options } )
+        options = {"data": today, "QuickOrder-DB": dbConn, "chef-Opt": ChefOpt}
 
 
-		self.window.show_all()
+        self.window = self.builder.get_object("FiloManager")
+        self.window.set_title("Il Filo - Manager "+__version__)
+        self.window.set_icon_from_file( resource_filename(__name__, 'images/FILO_icon.png') )
 
-		gobject.timeout_add(1000, self.update_stats)
+        self.window.connect("delete_event", self.delete_event)
 
-
-	def menuChef( self, widget, data=None ):
-
-		m = jobs.jobManager("menuChef", self.configFile)
-
-		m.set_jobParameters( today=data["options"]["data"], translate=data["conv"] )
-
-		dialog=m.getGUI()
-		dialog.set_transient_for(self.window)
-
-		icon = m.get_jobIcon()
-		icon.set_from_pixbuf(widget.get_children()[0].get_pixbuf())
+        self.window.connect("destroy", self.destroy)
 
 
-	def sendMail( self, widget, data=None ):
+        logoImg = self.builder.get_object("logo")
+        logoImg.set_from_file( resource_filename(__name__, 'images/logo.png') ) 
 
-		m = jobs.jobManager("sendMail", self.configFile)
+        companyName = self.builder.get_object("companyName")
+        companyName.set_text( self.config.get("company", "name") )
 
-		m.set_jobParameters( today=data["options"]["data"], test=data["test"] )
+        companyBuffer = self.builder.get_object("companyBuffer")
+        companyBuffer.insert_at_cursor( self.config.get("company", "address") + "\n" )
+        companyBuffer.insert_at_cursor( self.config.get("company", "city") + " " )
+        companyBuffer.insert_at_cursor( self.config.get("company", "country") + "\n" )
+        companyBuffer.insert_at_cursor( self.config.get("company", "email") )
 
-		dialog=m.getGUI()
-		dialog.set_transient_for(self.window)
+        # Creates Buttons 
+        IT_Button_menu = self.builder.get_object("chefMenu_IT")
+        IT_Image_menu = Gtk.Image()
+        IT_Image_menu.set_from_file( resource_filename(__name__, 'images/IT_chef.png') )
+        
+        IT_Button_menu.add(IT_Image_menu)
+        IT_Button_menu.connect( "clicked", self.menuChef, { "conv": None, "options": options } )
 
-		icon = m.get_jobIcon()
-		icon.set_from_pixbuf(widget.get_children()[0].get_pixbuf())
+        EN_Button_menu = self.builder.get_object("chefMenu_EN")
+        EN_Image_menu = Gtk.Image()
+        EN_Image_menu.set_from_file( resource_filename(__name__, 'images/EN_chef.png') )
+        EN_Button_menu.add(EN_Image_menu)
+        EN_Button_menu.connect( "clicked", self.menuChef, { "conv": "en", "options": options } )
+
+        FR_Button_menu = self.builder.get_object("chefMenu_FR")
+        FR_Image_menu = Gtk.Image()
+        FR_Image_menu.set_from_file( resource_filename(__name__, 'images/FR_chef.png') )
+        FR_Button_menu.add(FR_Image_menu)
+        FR_Button_menu.connect( "clicked", self.menuChef, { "conv": "fr", "options": options } )
+
+        ES_Button_menu = self.builder.get_object("chefMenu_ES")
+        ES_Image_menu = Gtk.Image()
+        ES_Image_menu.set_from_file( resource_filename(__name__, 'images/ES_chef.png') )
+        ES_Button_menu.add(ES_Image_menu)
+        ES_Button_menu.connect( "clicked", self.menuChef, { "conv": "es", "options": options } )
+
+        NL_Button_menu = self.builder.get_object("chefMenu_NL")
+        NL_Image_menu = Gtk.Image()
+        NL_Image_menu.set_from_file( resource_filename(__name__, 'images/NL_chef.png') )
+        NL_Button_menu.add(NL_Image_menu)
+        NL_Button_menu.connect("clicked", self.menuChef, { "conv": "nl", "options": options } )
+
+        Button_testmails = self.builder.get_object("MailsTest")
+        Image_testmails = Gtk.Image()
+        Image_testmails.set_from_file( resource_filename(__name__, 'images/testMails.png') )
+        Button_testmails.add(Image_testmails)
+        Button_testmails.connect("clicked", self.sendMail, { "test": True, "options": options } )
+
+        Button_mails = self.builder.get_object("Mails")
+        Image_mails = Gtk.Image()
+        Image_mails.set_from_file( resource_filename(__name__, 'images/chefMails.png') )
+        Button_mails.add(Image_mails)
+        Button_mails.connect("clicked", self.sendMail, { "test": True, "options": options } )
 
 
-	def update_stats( self ):
-#		apiKey = self.config.get("mailChimp", "apiKey")
-#		ms = MailSnake(apiKey)
-#		accountDetails=ms.call('getAccountDetails',params = {})
-#		self.builder.get_object("mailsAvaible").set_text(str(accountDetails['emails_left']))
-		self.builder.get_object("data").set_text( datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") )
-		return True
-		
+        self.window.show_all()
 
-	def delete_event(self, widget, event, data=None):
-		print "delete event occurred"
-		return False
+        GLib.timeout_add(1000, self.update_stats)
 
-	def destroy(self, widget, data=None):
-		print "destroy signal occurred"
-		gtk.main_quit()
 
-	def main(self):
-		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager') ):
-			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager') )
+    def menuChef( self, widget, data=None ):
 
-		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/log') ):
-			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/log') )
+        m = jobs.jobManager("menuChef", self.configFile)
 
-		if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/Menuchef') ):
-			os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/Menuchef') )
+        m.set_jobParameters( today=data["options"]["data"], translate=data["conv"] )
 
-		gtk.main()
+        dialog=m.getGUI()
+        dialog.set_transient_for(self.window)
+
+        icon = m.get_jobIcon()
+        icon.set_from_pixbuf(widget.get_children()[0].get_pixbuf())
+
+
+    def sendMail( self, widget, data=None ):
+
+        m = jobs.jobManager("sendMail", self.configFile)
+
+        m.set_jobParameters( today=data["options"]["data"], test=data["test"] )
+
+        dialog=m.getGUI()
+        dialog.set_transient_for(self.window)
+
+        icon = m.get_jobIcon()
+        icon.set_from_pixbuf(widget.get_children()[0].get_pixbuf())
+
+
+    def update_stats( self ):
+#       apiKey = self.config.get("mailChimp", "apiKey")
+#       ms = MailSnake(apiKey)
+#       accountDetails=ms.call('getAccountDetails',params = {})
+#       self.builder.get_object("mailsAvaible").set_text(str(accountDetails['emails_left']))
+        self.builder.get_object("data").set_text( datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") )
+        return True
+        
+
+    def delete_event(self, widget, event, data=None):
+        print("delete event occurred")
+        return False
+
+    def destroy(self, widget, data=None):
+        print("destroy signal occurred")
+        Gtk.main_quit()
+
+    def main(self):
+        if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager') ):
+            os.makedirs( os.path.join( os.environ['HOME'], '.filomanager') )
+
+        if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/log') ):
+            os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/log') )
+
+        if not os.path.exists( os.path.join( os.environ['HOME'], '.filomanager/Menuchef') ):
+            os.makedirs( os.path.join( os.environ['HOME'], '.filomanager/Menuchef') )
+
+        Gtk.main()
 

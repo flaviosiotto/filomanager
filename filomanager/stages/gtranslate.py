@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import urllib, urllib2
+#import urllib, urllib2
 try:
 	import json
 except ImportError:
@@ -17,8 +17,8 @@ def translate(text,src='', to='en'):
 		'q': text
 	})
 
-	response = urllib2.urlopen(api + parameters)
-	translations = json.loads(response.read())
+	# response = urllib2.urlopen(api + parameters)
+	# translations = json.loads(response.read())
 
-	translated_text = translations['data']['translations'][0]['translatedText']
-	return translated_text.encode('utf-8')
+	# translated_text = translations['data']['translations'][0]['translatedText']
+	# return translated_text.encode('utf-8')
